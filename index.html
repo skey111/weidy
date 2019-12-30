@@ -1,0 +1,169 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>全民VIP电影</title>
+    <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
+    <style type="text/css">
+        .dymain {
+            height: 680px;
+            width: 100%;
+            background-color: black;
+        }
+
+        .bgpage {
+            background-color: #393D49;
+        }
+
+        /* footer */
+        .layui-footer {
+            background-color: #393D49;
+            color: rgba(255,255,255,.7);
+            font-size: 12px;
+            line-height: 26px;
+            padding: 20px 0 20px;
+        }
+
+            .layui-footer .subLogo img {
+                filter: alpha(opacity=60);
+                opacity: 0.6;
+            }
+
+            .layui-footer .subLogo h2 {
+                border-left: 1px #515253 solid;
+                font-size: 15px;
+                line-height: 1.2;
+                padding-left: 10px;
+                margin-left: 90px;
+            }
+
+            .layui-footer .footerUl {
+                text-align: right;
+                line-height: 20px;
+            }
+
+                .layui-footer .footerUl li {
+                    line-height: 23px;
+                }
+
+                .layui-footer .footerUl a {
+                    color: rgba(255,255,255,.7);
+                }
+
+                    .layui-footer .footerUl a:hover {
+                        color: #fff;
+                    }
+    </style>
+</head>
+<body>
+    <div class="layui-fluid">
+        <div class="layui-layout">
+            <div class="layui-header">
+                <div class="page-wb page-header">
+                    <div class="layui-nav page-left">
+                        <ul class="layui-container">
+                            <li class="layui-nav-item layui-this navtop"><a href="/">首页</a></li>
+                            <li class="layui-nav-item navtop">
+                                <a href="/Template/List">最新电影</a>
+                            </li>
+                            <li class="layui-nav-item navtop">
+                                <a href="/Template/Single">最新电视剧</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div class="layui-container" style="border:1px solid red;">
+            <div class="dymain">
+                <iframe id="ifrMain" style="width:100%;height:100%;" frameborder="0"></iframe>
+            </div>
+            <br />
+            <div class="layui-form" action="">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">电影地址</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="dyurl" id="dyurl" required lay-verify="required" placeholder="请输入电影地址" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">选择通道</label>
+                    <div class="layui-input-block">
+                        <select class="form-control input-lg" id="seljk">
+                            <option value="http://jx.du2.cc/?url=" selected="">⑤号通用vip引擎系统【全网解析】</option>
+                            <option value="http://jx.598110.com/?url=" selected="">④号通用vip引擎系统【超级稳定通用】</option>
+                            <option value="http://jx.618ge.com/?url=" selected="">③号通用vip引擎系统【稳定通用】</option>
+                            <option value="http://vip.jlsprh.com/?url=" selected="">②号通用vip引擎系统【稳定通用】</option>
+                            <option value="http://jx.drgxj.com/?url=" selected=""><span style="color:red;">无广告超速解析</span>【通用】</option>
+                            <option value="http://jx.598110.com/?url=" selected="">①号通用vip引擎系统【稳定通用】</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div>
+                <button class="layui-btn layui-btn-fluid" onclick="onplayer();" type="button">GO - 立即开始解析</button>
+                <br />
+                <br />
+                <button type="button" class="layui-btn layui-btn-primary layui-btn-fluid" onclick="onplayfull();">NEW - 点击全屏解析</button>
+            </div>
+            <br />
+            <br />
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="layui-fluid bgpage">
+        <div class="layui-container">
+            <div class="layui-footer layui-mt30" id="footer">
+                <div class="page-wb layui-clear">
+                    <div class="page-left layui-mt5">
+                        <div class="subLogo layui-clear"><a href="/"><img src="/Assets/images/logo.png" height="18" class="page-left"></a><h2>专业的网络资源分享平台</h2></div>
+                        <p class="layui-mt10">本站资源均来自互联网或会员发布，如果侵犯了您的权益请与我们联系，我们将在24小时内处理！</p>
+                    </div>
+                    <div class="page-right">
+                        <ul class="footerUl">
+                            <li>
+                                <a href="#">商业会员</a>&nbsp;｜&nbsp;
+                                <a href="#">积分获取</a>&nbsp;｜&nbsp;
+                                <a href="#">关于我们</a>&nbsp;｜&nbsp;
+                                <a href="#">免责声明</a>&nbsp;｜&nbsp;
+                                <a href="#">联系我们</a>&nbsp;｜&nbsp;
+                                <a href="#">站长统计</a>
+                            </li>
+                            <p class="layui-mt10">Copyright © 2015-2018 HTML模版大全网✪ 版权所有  京ICP备10218015号-18</p>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://www.layuicdn.com/layui/layui.js"></script>
+
+    <script>
+        var $;
+        //Demo
+        layui.use(['jquery', 'form'], function () {
+            $ = layui.$ //重点处
+            var form = layui.form;
+        });
+
+        function onplayer() {
+            var dyurl = $("#dyurl").val();
+            var service = $("#seljk").val();
+            var newurl = service + dyurl;
+
+            $("#ifrMain").attr("src", newurl);
+        }
+
+        function onplayfull() {
+            var dyurl = $("#dyurl").val();
+            var service = $("#seljk").val();
+            var newurl = service + dyurl;
+            window.open(newurl, "_blank");
+        }
+    </script>
+</body>
+</html>
