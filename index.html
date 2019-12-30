@@ -76,18 +76,12 @@
             </div>
         </div>
         <br />
-        <div class="layui-container" style="border:1px solid red;">
+        <div class="layui-container" style="">
             <div class="dymain">
                 <iframe id="ifrMain" style="width:100%;height:100%;" frameborder="0"></iframe>
             </div>
             <br />
             <div class="layui-form" action="">
-                <div class="layui-form-item">
-                    <label class="layui-form-label">电影地址</label>
-                    <div class="layui-input-block">
-                        <input type="text" name="dyurl" id="dyurl" required lay-verify="required" placeholder="请输入电影地址" autocomplete="off" class="layui-input">
-                    </div>
-                </div>
                 <div class="layui-form-item">
                     <label class="layui-form-label">选择通道</label>
                     <div class="layui-input-block">
@@ -101,13 +95,19 @@
                         </select>
                     </div>
                 </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">电影地址</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="dyurl" id="dyurl" required lay-verify="required" placeholder="请输入电影地址" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
             </div>
             <br />
             <div>
-                <button class="layui-btn layui-btn-fluid" onclick="onplayer();" type="button">GO - 立即开始解析</button>
+                <button class="layui-btn layui-btn-fluid layui-btn layui-btn-lg" onclick="onplayer();" type="button">GO - 立即开始解析</button>
                 <br />
                 <br />
-                <button type="button" class="layui-btn layui-btn-primary layui-btn-fluid" onclick="onplayfull();">NEW - 点击全屏解析</button>
+                <button type="button" class="layui-btn layui-btn-fluid layui-btn-lg layui-btn-normal" onclick="onplayfull();">NEW - 点击全屏解析</button>
             </div>
             <br />
             <br />
@@ -167,14 +167,14 @@
 
 
     </script>
-<script>
-var cnzz_s_tag =document.createElement('script');
-cnzz_s_tag.type = "text/javascript";
-cnzz_s_tag.async = true;
-cnzz_s_tag.charset = "utf-8";
-cnzz_s_tag.src = "http://w.cnzz.com/c.php?id=1278528366&async=1";
-var root_s = document.getElementsByTagName('script')[0];
-root_s.parentNode.insertBefore(cnzz_s_tag,root_s);
-</script>
+    <script>
+        var cnzz_s_tag = document.createElement('script');
+        cnzz_s_tag.type = "text/javascript";
+        cnzz_s_tag.async = true;
+        cnzz_s_tag.charset = "utf-8";
+        cnzz_s_tag.src = "http://w.cnzz.com/c.php?id=1278528366&async=1";
+        var root_s = document.getElementsByTagName('script')[0];
+        root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
+    </script>
 </body>
 </html>
