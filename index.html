@@ -8,6 +8,7 @@
 
     <title>全民VIP-免费观看VIP电影</title>
     <link rel="stylesheet" type="text/css" href="https://www.layuicdn.com/layui/css/layui.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <style type="text/css">
         .dymain {
             height: 680px;
@@ -59,14 +60,48 @@
                     }
 
         .layui-container {
-        }.card-title>span,.card-title>strong{border-left: 8px deeppink solid;font-weight: 600;font-size: 0.9em;padding-left: 8px;border-radius: 3px;}
-.card-title>small{margin-left: 18px;color: gray;font-weight: 500;}
-.card-block{padding: 38px 0px;}
-.card-block>p{font-size:0.8em;margin-bottom:3px;color: grey;letter-spacing: 1px;}
-.card-block-sign{margin-right: 2%;margin-bottom: 0.8em;}
-.card-block-sign>img{border: 1px solid gainsboro;width: 15%;padding:8px 1%;border-radius: 8px;}
-.card-block-sign>img:hover{border: 1px solid deeppink;}
+        }
 
+        .card-title > span, .card-title > strong {
+            border-left: 8px deeppink solid;
+            font-weight: 600;
+            font-size: 0.9em;
+            padding-left: 8px;
+            border-radius: 3px;
+        }
+
+        .card-title > small {
+            margin-left: 18px;
+            color: gray;
+            font-weight: 500;
+        }
+
+        .card-block {
+            padding: 38px 0px;
+        }
+
+            .card-block > p {
+                font-size: 0.8em;
+                margin-bottom: 3px;
+                color: grey;
+                letter-spacing: 1px;
+            }
+
+        .card-block-sign {
+            margin-right: 2%;
+            margin-bottom: 0.8em;
+        }
+
+            .card-block-sign > img {
+                border: 1px solid gainsboro;
+                width: 15%;
+                padding: 8px 1%;
+                border-radius: 8px;
+            }
+
+                .card-block-sign > img:hover {
+                    border: 1px solid deeppink;
+                }
     </style>
 </head>
 <body>
@@ -130,10 +165,10 @@
             </div>
             <br />
             <div>
-                <button class="layui-btn layui-btn-fluid layui-btn layui-btn-lg" onclick="onplayer();" type="button">GO - 立即开始解析</button>
+                <button class="layui-btn layui-btn-fluid layui-btn layui-btn-lg" onclick="onplayer();" type="button">GO - 立即开始播放</button>
                 <br />
                 <br />
-                <button type="button" class="layui-btn layui-btn-fluid layui-btn-lg layui-btn-normal" onclick="onplayfull();">NEW - 点击全屏解析</button>
+                <button type="button" class="layui-btn layui-btn-fluid layui-btn-lg layui-btn-normal" onclick="onplayfull();">NEW - 点击全屏播放</button>
             </div>
             <br />
             <br />
@@ -209,11 +244,9 @@
     </div>
     <script src="https://www.layuicdn.com/layui/layui.js"></script>
 
-    <script>
-        var $;
+    <script> 
         //Demo
         layui.use(['jquery', 'form', 'menu'], function () {
-            $ = layui.$ //重点处
             var form = layui.form, menu = layui.menu;
             menu.init();
         });
