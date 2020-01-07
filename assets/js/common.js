@@ -7,3 +7,10 @@ var root_s = document.getElementsByTagName('script')[0];
 root_s.parentNode.insertBefore(cnzz_s_tag, root_s);
 
 
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?d3286f6ce58931e7481ffe4a9d3e705e";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
